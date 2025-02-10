@@ -1,0 +1,117 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f0f0f0; /* Light gray background */
+}
+
+.pricing-table {
+    display: flex;
+    gap: 20px; /* Space between cards */
+}
+
+.pricing-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Adjust as needed */
+    transition: transform 0.3s ease; /* For hover effect */
+    display: flex; /* Use flexbox for vertical alignment */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+}
+
+.card-content {
+    
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allow content to fill available space */
+}
+
+.card-header {
+    text-align: center; /* Center header content */
+    margin-bottom: 20px;
+    background: linear-gradient(to bottom, #ee9ca7, #ffdde1);
+}
+.card-header h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333; /* Dark gray text */
+}
+
+.card-header hr {
+    border-top: 1px solid #ccc; /* Light gray line */
+    margin: 10px 0;
+}
+
+.card-header p {
+    color: #666;
+    font-size: 0.9rem;  /* Slightly smaller font size */
+}
+
+
+.card-price {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center price horizontally */
+    margin-bottom: 20px;
+}
+
+.dollar {
+    font-size: 2rem;
+    color: #666; /* Grayish */
+    align-self: flex-start;
+}
+
+.price {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0 5px;
+    color: #333;
+}
+
+.period {
+    font-size: 2rem;
+    color: #666;
+    align-self: flex-end; /* Align to the right */
+}
+
+.card-feature {
+    flex-grow: 1; /* Allow features to take up remaining space */
+}
+
+.features {
+    list-style: none;;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.features li {
+    margin-bottom: 10px;
+    color: #666;
+    
+}
+
+.buy-button {
+    background: linear-gradient(to right, #f05053, #e1eec3); /* Example gradient */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    align-self: center; /* Center the button */
+    margin-bottom: 20px;  /* Add some margin at the bottom */
+}
+
+.buy-button:hover {
+    background: linear-gradient(to left, #f05053, #e1eec3); /* Reversed gradient on hover */
+}
