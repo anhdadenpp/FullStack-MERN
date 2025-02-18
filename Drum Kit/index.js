@@ -7,16 +7,25 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
     var buttonInnerHTML = this.innerHTML; //this is the button that triggered the event listener   
 
     makeSound(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
   });
 
-}
+} 
 
+function buttonAnimation(currentKey) {
+  var activeButton = document.querySelector("." + currentKey);
+  activeButton.classList.add("pressed");
+  setTimeout(function() {
+    activeButton.classList.remove("pressed");
+  }, 100);
+}
 
 
 //add event listener for keyboard press
 // detecting keybroad press
 document.addEventListener("keypress", function(event) {  
   makeSound(event.key);
+  buttonAnimation(event.key);
 });
 
 function makeSound(key) { 
